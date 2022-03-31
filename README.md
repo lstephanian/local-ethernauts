@@ -24,3 +24,4 @@ This challenge is based on https://ethernaut.openzeppelin.com/
 # Helpful Tip
 
 - You can console.log in solidity using hardhat! Read here for more details: https://hardhat.org/tutorial/debugging-with-hardhat-network.html
+# local-ethernauts
